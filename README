@@ -1,1 +1,7 @@
 c++练习
+
+
+mysql数据统计：
+1、统计特定事件段每天的数据
+SELECT date_format(create_time, '%Y-%m-%d') as date, count(*) as sheets FROM table_order WHERE create_time BETWEEN '2019-04-01 00:00:00' AND '2019-09-30 23:59:59'
+GROUP BY date_format(create_time, '%Y-%m-%d ');
